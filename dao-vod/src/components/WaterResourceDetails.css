@@ -1,0 +1,87 @@
+.water-resource-details {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+.resource-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.resource-icon {
+  font-size: 2.5em;
+  color: #00b4d8;
+}
+
+.resource-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.info-card {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-icon {
+  font-size: 1.5em;
+  color: #00b4d8;
+  margin-bottom: 10px;
+}
+
+.info-card h3 {
+  margin: 10px 0;
+  color: #00b4d8;
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-card li {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.measurement-history {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.measurement-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resource-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  background: #00b4d8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.action-button:hover {
+  background: #0096c7;
+} 
