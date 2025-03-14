@@ -1,13 +1,14 @@
+import * as THREE from 'three';
 import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { shaderMaterial } from '@react-three/drei';
+import { shaderMaterial, Sphere, extend } from '@react-three/drei';
 
 const CyberWaterMaterial = shaderMaterial(
   {
     time: 0,
-    color: new THREE.Color('#00ffff'),
-    secondaryColor: new THREE.Color('#ff00ff'),
-    gridColor: new THREE.Color('#00ff00'),
+    color: new THREE.Color(0x00ffff),
+    secondaryColor: new THREE.Color(0xff00ff),
+    gridColor: new THREE.Color(0x00ff00),
   },
   // vertex shader
   `
@@ -63,6 +64,8 @@ const CyberWaterMaterial = shaderMaterial(
   `
 );
 
+extend({ CyberWaterMaterial });
+
 const CyberWater = () => {
   const materialRef = useRef();
   const meshRef = useRef();
@@ -78,7 +81,7 @@ const CyberWater = () => {
 
   return (
     <Sphere ref={meshRef} args={[1, 100, 200]}>
-      <CyberWaterMaterial ref={materialRef} />
+      <cyberWaterMaterial ref={materialRef} />
     </Sphere>
   );
 };
